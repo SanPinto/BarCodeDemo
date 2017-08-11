@@ -1,15 +1,13 @@
-package com.barcode.reader.barcodereaderapp;
+package com.barcode.reader.barcodereaderapp.ui;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.SparseArray;
@@ -17,15 +15,13 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.CommonStatusCodes;
+import com.barcode.reader.barcodereaderapp.R;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
-
-import static com.barcode.reader.barcodereaderapp.MainActivity.PERMISSION_REQUEST;
 
 /**
  * Created by sangeetha on 7/8/17.
@@ -154,14 +150,14 @@ public class BarcodeCaptureActivity extends AppCompatActivity {
     private void requestCameraPermission() {
         Log.w(TAG, "Camera permission is not granted. Requesting permission");
 
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST);
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, MainActivity.PERMISSION_REQUEST);
 
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
-        if (requestCode != PERMISSION_REQUEST) {
+        if (requestCode != MainActivity.PERMISSION_REQUEST) {
             Log.d(TAG, "Got unexpected permission result: " + requestCode);
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
             return;

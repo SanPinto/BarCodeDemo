@@ -1,4 +1,4 @@
-package com.barcode.reader.barcodereaderapp;
+package com.barcode.reader.barcodereaderapp.ui;
 
 import android.Manifest;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.barcode.reader.barcodereaderapp.R;
+import com.barcode.reader.barcodereaderapp.productDetail.ui.ProductDetailActivity;
 import com.google.android.gms.vision.barcode.Barcode;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST);
         }
     }
@@ -54,7 +56,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             if (data != null) {
                 Barcode barcode = data.getParcelableExtra("barcode");
-                mBarCodeValue.setText("barCode Value :" + barcode.displayValue);
+//                mBarCodeValue.setText("barCode Value :" + barcode.displayValue);
+                displayProductDetails(barcode);
             } else {
                 Toast.makeText(this, "No Barcodes Found", Toast.LENGTH_SHORT).show();
             }
@@ -63,5 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
+    }
+
+    private void displayProductDetails(Barcode barcode) {
+        Intent intent = new Intent(this, ProductDetailActivity.class);
+        intent.putExtra("barcode", barcode);
+        startActivity(intent);
+        finish();
     }
 }
