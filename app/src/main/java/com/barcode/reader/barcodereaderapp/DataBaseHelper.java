@@ -9,8 +9,6 @@ import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import io.realm.RealmObject;
-import io.realm.RealmResults;
 
 /**
  * Created by COMPUTER on 8/13/2017.
@@ -65,9 +63,9 @@ public class DataBaseHelper {
 
     public void removeItem(Product product, ViewCartFragment listener, int pos) {
         Realm realm = getRealmInstance();
-        RealmResults<Product> results = realm.where(Product.class).equalTo("id", product.id).findAll();
+        Product item = realm.where(Product.class).equalTo("id", product.id).findFirst();
         realm.beginTransaction();
-        results.remove(0);
+        item.deleteFromRealm();
         realm.commitTransaction();
         listener.onItemRemoved(pos);
     }

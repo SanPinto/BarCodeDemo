@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#04A6FD</color>
     <color name="productDetailColor">#2F4F4F</color>
     <color name="default_circle_indicator_fill_color">@color/colorPrimary</color>
     <color name="default_circle_indicator_page_color">#00000000</color>
@@ -10,4 +10,5 @@
     <color name="default_circle_indicator_stroke_color">#555555</color>
     <color name="selected_stroke_color">#AAAAAA</color>
     <color name="white">#FFFFFf</color>
+    <color name="black">#000000</color>
 </resources>

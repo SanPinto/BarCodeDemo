@@ -31,26 +31,60 @@
             android:layout_below="@+id/brand_name"
             android:textColor="@color/productDetailColor" />
 
-        <TextView
-            android:id="@+id/price"
+        <RelativeLayout
+            android:id="@+id/spinner_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/seller"
+            android:layout_below="@+id/seller">
+
+            <TextView
+                android:id="@+id/size_chart_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size_chart" />
+
+            <Spinner
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/size_chart_header" />
+
+            <TextView
+                android:id="@+id/color_chart_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_toRightOf="@+id/size"
+                android:text="@string/color" />
+
+            <Spinner
+                android:id="@+id/color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/color_chart_header" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_layout"
+            android:gravity="center"
             android:textColor="@color/productDetailColor" />
 
-        <!--<TextView-->
-        <!--android:id="@+id/size_header"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/size"/>-->
+        <ImageButton
+            android:id="@+id/remove_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner_layout"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete_cart" />
 
 
     </RelativeLayout>
 
-    <!--<Button-->
-        <!--android:id="@+id/remove_btn"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom"-->
-        <!--android:text="@string/remove" />-->
+
 </LinearLayout>

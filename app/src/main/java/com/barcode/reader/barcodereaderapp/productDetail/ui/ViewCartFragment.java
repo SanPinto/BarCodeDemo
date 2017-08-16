@@ -53,6 +53,8 @@ public class ViewCartFragment extends Fragment implements ProductPresenterContra
     @Override
     public void onRemoveFromCart(Product product, int index) {
         DataBaseHelper.getInstance().removeItem(product, this, index);
+        mRecyclerView.getAdapter().notifyDataSetChanged();
+
     }
 
     @Override

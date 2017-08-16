@@ -288,9 +288,9 @@ public class ProductDetailActivity extends AppCompatActivity implements ProductP
         if (mColorsListView != null) {
             for (int i = 0; i < mColorsListView.getChildCount(); i++) {
                 if (i == index) {
-                    mColorsListView.getChildAt(index).setActivated(true);
+                    mColorsListView.getChildAt(index).setSelected(true);
                 } else {
-                    mColorsListView.getChildAt(index).setActivated(false);
+                    mColorsListView.getChildAt(index).setSelected( false);
                 }
             }
         }

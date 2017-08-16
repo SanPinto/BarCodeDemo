@@ -1,22 +1,13 @@
 package com.barcode.reader.barcodereaderapp.productDetail.Presenter;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
+import com.barcode.reader.barcodereaderapp.ApplicationUtils;
 import com.barcode.reader.barcodereaderapp.DataBaseHelper;
-import com.barcode.reader.barcodereaderapp.R;
 import com.barcode.reader.barcodereaderapp.productDetail.interpreter.ProductDetailInterpreter;
 import com.barcode.reader.barcodereaderapp.productDetail.model.Product;
 import com.barcode.reader.barcodereaderapp.productDetail.model.ProductDetail;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import io.realm.Realm;
@@ -60,14 +51,7 @@ public class ProductPresenterImpl implements ProductPresenterContract.ProductPre
 
     @Override
     public List<String> getProductList(String color) {
-        String[] colorsArray = color.split(",");
-        if(colorsArray.length > 0)
-        return Arrays.asList(colorsArray);
-        else {
-            List<String> colors = new ArrayList<>();
-            colors.add(color);
-            return colors;
-        }
+        return ApplicationUtils.getProductList(color);
 
     }
 
