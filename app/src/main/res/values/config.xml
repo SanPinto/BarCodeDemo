@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="product_url">http://www.mocky.io/v2/598c474d260000c003ec220f</string>
+    <string name="product_url_1"> http://www.mocky.io/v2/598ef32c1200003605f4d22b</string>
+    <string name="product_url_2"> http://www.mocky.io/v2/59927afd100000640b5577b6</string>
+    <string name="product_url_3"> http://www.mocky.io/v2/599282541000006a0b5577db</string>
+    <string name="product_url_4"> http://www.mocky.io/v2/5992821f100000700b5577d9</string>
+    <string name="product_url_5"> http://www.mocky.io/v2/599282db1000007c0b5577dc</string>
 </resources>

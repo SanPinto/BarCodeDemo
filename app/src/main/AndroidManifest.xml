@@ -3,9 +3,10 @@
     package="com.barcode.reader.barcodereaderapp">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".BarCodeDemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -27,7 +28,7 @@
 
         <activity android:name=".ui.BarcodeCaptureActivity" />
         <activity android:name=".productDetail.ui.ProductDetailActivity" />
-
+        <activity android:name=".productDetail.ui.CartDetailActivity" />
     </application>
 
 </manifest>

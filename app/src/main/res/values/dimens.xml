@@ -6,7 +6,7 @@
     <!--Horizontal Progress bar -->
     <dimen name="progress_bar_height">15dp</dimen>
     <dimen name="brand_name_size">15sp</dimen>
-    <dimen name="product_detail_size">12dp</dimen>
+    <dimen name="product_detail_size">12sp</dimen>
     <dimen name="margin_left">10dp</dimen>
     <dimen name="margin_right">10dp</dimen>
     <dimen name="margin">10dp</dimen>
@@ -14,9 +14,17 @@
     <dimen name="margin_bottom">10dp</dimen>
     <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
     <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="button_margin_left">15dp</dimen>
+    <dimen name="button_margin_right">15dp</dimen>
+    <dimen name="padding">10dp</dimen>
 
     <integer name="default_circle_indicator_orientation">0</integer>
 
     <bool name="default_circle_indicator_snap">false</bool>
     <bool name="default_circle_indicator_centered">true</bool>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="color_code_width">35dp</dimen>
+    <dimen name="color_code_height">35dp</dimen>
 </resources>

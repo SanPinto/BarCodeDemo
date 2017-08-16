@@ -9,4 +9,5 @@
     <!--<color name="default_circle_indicator_stroke_color">#FFAAAAAA</color>-->
     <color name="default_circle_indicator_stroke_color">#555555</color>
     <color name="selected_stroke_color">#AAAAAA</color>
+    <color name="white">#FFFFFf</color>
 </resources>
